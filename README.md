@@ -1,28 +1,28 @@
 # YOLO-v2: Real-Time Object Detection
 
-### History of mAP, on VOC2007 achieved so far
+## History of mAP, on VOC2007 achieved so far
 
-#### Resnet-50: 
+### Resnet-50: 
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
 - 74 mAP by original repo
 
-#### Darkent19:
+### Darkent19:
 - 71 mAP by original repo
 
-### Disclaimer
+## Disclaimer
 This is a re-implementation of original yolo v2 which is based on [darknet](https://github.com/pjreddie/darknet).
 The arXiv paper is available [here](https://arxiv.org/pdf/1612.08242.pdf).
 
-### Demo
+## Demo
 
 ![demo1](https://user-images.githubusercontent.com/3307514/28980832-29bb0262-7904-11e7-83e3-a5fec65e0c70.png)
 
-### Getting started
+## Getting started
 - Build from source, this is required because this example is not merged, some
 custom operators are not presented in official MXNet. [Instructions](http://mxnet.io/get_started/install.html)
 - Install required packages: `cv2`, `matplotlib`
 
-### Try the demo
+## Try the demo
 - Download the pretrained [model](https://github.com/zhreshold/mxnet-yolo/releases/download/0.1-alpha/yolo2_darknet19_416_pascalvoc0712_trainval.zip)(darknet as backbone), or this [model](https://github.com/zhreshold/mxnet-yolo/releases/download/v0.2.0/yolo2_resnet50_voc0712_trainval.tar.gz)(resnet50 as backbone) and extract to `model/` directory.
 - Run
 ```
@@ -32,7 +32,7 @@ python demo.py --cpu
 python demo.py -h
 ```
 
-### Train the model
+## Train the model
 - Grab a pretrained model, e.g. [`darknet19`](https://github.com/zhreshold/mxnet-yolo/releases/download/0.1-alpha/darknet19_416_ILSVRC2012.zip)
 - (optional) Grab a pretrained resnet50 model, [`resnet-50-0000.params`](http://data.dmlc.ml/models/imagenet/resnet/50-layers/resnet-50-0000.params),[`resnet-50-symbol.json`](http://data.dmlc.ml/models/imagenet/resnet/50-layers/resnet-50-symbol.json), this will produce slightly better mAP than `darknet` in my experiments.
 - Download PASCAL VOC dataset.
