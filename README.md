@@ -1,12 +1,13 @@
 # YOLO-v2: Real-Time Object Detection
 
-## History of mAP
+### History of mAP, on VOC2007 achieved so far
 
-### Resnet-50: 
+#### Resnet-50: 
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
+- 74 mAP by original repo
 
-Still under development. 71 mAP(darknet) and 74mAP(resnet50) on VOC2007 achieved so far.
-This is a pre-released version.
+#### Darkent19:
+- 71 mAP by original repo
 
 ### Disclaimer
 This is a re-implementation of original yolo v2 which is based on [darknet](https://github.com/pjreddie/darknet).
