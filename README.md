@@ -1,6 +1,6 @@
 # YOLO-v2: Real-Time Object Detection
 
-## History of mAP, on VOC2007 achieved so far
+## History of mAP (on VOC2007)
 
 ### Resnet-50: 
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
