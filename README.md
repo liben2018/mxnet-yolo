@@ -4,10 +4,10 @@
 
 ### Resnet-50: 
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
-- 74 mAP by original repo
+- 74 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
 
 ### Darkent19:
-- 71 mAP by original repo
+- 71 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
 
 ## Difference between official Mxnet and the one used in the repo
 
