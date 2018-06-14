@@ -9,8 +9,17 @@
 ### Darkent19:
 - 71 mAP by original repo
 
+## Difference between official Mxnet and the one used in the repo
+
+added the following operators:
+- yolo_output.* to src/operator/contrib
+- stack_neighbor into src/operator/matrix_op
+
+https://github.com/zhreshold/mxnet-yolo/issues/7 
+
 ## Disclaimer
-This is a re-implementation of original yolo v2 which is based on [darknet](https://github.com/pjreddie/darknet).
+Re-implementation of original yolo-v2 which is based on [darknet](https://github.com/pjreddie/darknet).
+
 The arXiv paper is available [here](https://arxiv.org/pdf/1612.08242.pdf).
 
 ## Demo
