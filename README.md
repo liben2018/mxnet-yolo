@@ -3,6 +3,7 @@
 ## History of mAP (on VOC2007)
 
 ### Resnet-50: 
+- 2018/06/14: Epoch[126] Validation-mAP=0.757837
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
 - 74 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
 
