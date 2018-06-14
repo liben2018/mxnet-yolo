@@ -1,8 +1,7 @@
 # History of mAP
 
-### Resnet-50:
-2018/06/14 
-- Epoch[105] Validation-mAP=0.757725
+### Resnet-50: 
+- 2018/06/14: Epoch[105] Validation-mAP=0.757725
 
 # YOLO-v2: Real-Time Object Detection
 
