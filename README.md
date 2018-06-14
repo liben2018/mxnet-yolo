@@ -1,12 +1,11 @@
-# History of mAP
+# YOLO-v2: Real-Time Object Detection
+
+## History of mAP
 
 ### Resnet-50: 
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
 
-# YOLO-v2: Real-Time Object Detection
-
 Still under development. 71 mAP(darknet) and 74mAP(resnet50) on VOC2007 achieved so far.
-
 This is a pre-released version.
 
 ### Disclaimer
