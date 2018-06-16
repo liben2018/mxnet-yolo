@@ -3,7 +3,8 @@
 ## History of mAP (on VOC2007)
 
 ### Resnet-50: 
-- Exp1: lr=0.001, steps=(90, 180), data-shape=416
+#### Exp1: 
+- lr=0.001, steps=(90, 180), data-shape=416
 - first: 
 ```
 python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/resnet-50 --epoch 0 --log train_416.log --min-random-shape 320 --batch-size 30
@@ -19,12 +20,18 @@ python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretra
 - 2018/06/14: Epoch[104] Validation-mAP=0.757814
 - 74 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
 
-- Exp2: 
+#### Exp2 
 - Command: 
 ```
 python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 240 --data-shape 416 --random-shape-epoch 1 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180 --lr-factor 0.1 --log “train-exp2.log” --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
 ```
 - 2018/06/15: Epoch[236] Validation-mAP=0.707528
+
+#### EXP3
+- Command:
+```
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 180,360 --lr-factor 0.1 --log train-exp3.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
+```
 
 ### Darkent19:
 - 71 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
