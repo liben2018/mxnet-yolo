@@ -3,7 +3,7 @@
 ## History of mAP (on VOC2007)
 
 ### Resnet-50: 
-#### Exp1: 
+#### Exp1 
 - lr=0.001, steps=(90, 180), data-shape=416. However, adding the first 80 epoch, in fact the steps = (90 + 80, 180 + 80)
 - first: just runing in 80 epoch then stop because of batch-size=30!
 ```
@@ -28,7 +28,7 @@ python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/r
 ```
 - 2018/06/15: Epoch[236] Validation-mAP=0.707528
 
-#### EXP3
+#### Exp3
 - lr-steps 180,360
 - Command:
 ```
