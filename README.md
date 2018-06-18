@@ -34,6 +34,7 @@ python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/r
 ```
 python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 180,360 --lr-factor 0.1 --log train-exp3.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
 ```
+- 2018/06/18: Epoch[256] Validation-mAP=0.758914
 
 ### Darkent19:
 - 71 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
