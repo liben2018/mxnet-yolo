@@ -9,7 +9,7 @@
 ```
 python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/resnet-50 --epoch 0 --log train_416.log --min-random-shape 320 --batch-size 30
 ```
-- second: continuing to training based on the 80-th weight in the first, meanwhile tuning batch-size to 28!
+- second: continuing to train based on the 80-th weight in the first, meanwhile tuning batch-size to 28!
 ```
 python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/yolo2_resnet50_416 --epoch 80 --log train_416_80.log --min-random-shape 320 --batch-size 28
 ```
