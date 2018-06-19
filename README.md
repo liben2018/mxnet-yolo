@@ -25,6 +25,8 @@ python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretra
 - Command: 
 ```
 python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 240 --data-shape 416 --random-shape-epoch 1 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180 --lr-factor 0.1 --log “train-exp2.log” --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
+
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.5 --log train-exp4.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5 --resume 288
 ```
 - 2018/06/15: Epoch[236] Validation-mAP=0.707528
 
