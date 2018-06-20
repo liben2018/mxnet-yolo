@@ -55,7 +55,6 @@ python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/r
 
 added the following operators:
 - yolo_output.* to src/operator/contrib
-- stack_neighbor into src/operator/matrix_op
 
 https://github.com/zhreshold/mxnet-yolo/issues/7 
 
