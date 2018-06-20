@@ -1,5 +1,9 @@
 # YOLO-v2: Real-Time Object Detection
 
+## Todo list
+- adding --num_layers in train.py for choosing different network
+- 
+
 ## History of mAP (on VOC2007)
 
 ### Resnet-50: 
