@@ -110,6 +110,8 @@ python tools/prepare_dataset.py --dataset pascal --year 2007 --set test --target
 python train.py --gpus 0,1,2,3 --epoch 0
 # choose different networks, such as resnet50_yolo
 python train.py --gpus 0,1,2,3 --network resnet50_yolo --data-shape 416 --pretrained model/resnet-50 --epoch 0
+# choose different networks, such as resnet152_yolo
+python train.py --gpus 0,1,2,3 --network resnet152_yolo --data-shape 416 --pretrained model/resnet-50 --epoch 0
 # see advanced arguments for training
 python train.py -h
 ```
