@@ -58,6 +58,15 @@ added the following operators:
 
 https://github.com/zhreshold/mxnet-yolo/issues/7 
 
+## Changing network
+- create file: mxnet-yolov2/symbol/symbol_resnet152_yolo.py 
+- change num_layers (from 50 to 152) in symbol_resnet152_yolo.py:
+```
+def get_symbol(num_classes=20, nms_thresh=0.5, force_nms=False, **kwargs):
+    #body = resnet.get_symbol(num_classes, 50, '3,224,224')
+    body = resnet.get_symbol(num_classes, 152, '3,224,224')
+```
+- using resnet152_yolo as --network in train.py
 ## Disclaimer
 Re-implementation of original yolo-v2 which is based on [darknet](https://github.com/pjreddie/darknet).
 
