@@ -2,7 +2,9 @@
 
 ## Todo list
 - adding --num_layers in train.py for choosing different network
-- 
+- get new network weights by training on imagenet directly or transfer learning
+- loss function
+- others
 
 ## History of mAP (on VOC2007)
 
@@ -48,6 +50,7 @@ python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/r
 
 python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.5 --log train-exp4.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5 --resume 288
 ```
+- 2018/06/21: Epoch[477] Validation-mAP=0.759190
 - 2018/06/20: Epoch[408] Validation-mAP=0.759149
 - 2018/06/19: Epoch[276] Validation-mAP=0.757242
 - 2018/06/19: Epoch[233] Validation-mAP=0.755262
@@ -64,6 +67,7 @@ https://github.com/zhreshold/mxnet-yolo/issues/7
 
 ## Changing network
 - create file: mxnet-yolov2/symbol/symbol_resnet152_yolo.py 
+- get weights file for resnet152
 - change num_layers (from 50 to 152) in symbol_resnet152_yolo.py:
 ```
 def get_symbol(num_classes=20, nms_thresh=0.5, force_nms=False, **kwargs):
