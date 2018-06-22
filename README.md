@@ -13,11 +13,13 @@
 - lr=0.001, steps=(90, 180), data-shape=416. However, adding the first 80 epoch, in fact the steps = (90 + 80, 180 + 80)
 - first: just runing in 80 epoch then stop because of batch-size=30!
 ```
-python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/resnet-50 --epoch 0 --log train_416.log --min-random-shape 320 --batch-size 30
+python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/resnet-50 \ 
+                    --epoch 0 --log train_416.log --min-random-shape 320 --batch-size 30
 ```
 - second: continuing to train based on the 80-th weight in the first, meanwhile tuning batch-size to 28!
 ```
-python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/yolo2_resnet50_416 --epoch 80 --log train_416_80.log --min-random-shape 320 --batch-size 28
+python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretrained model/yolo2_resnet50_416 \
+                    --epoch 80 --log train_416_80.log --min-random-shape 320 --batch-size 28
 ```
 - 2018/06/15: Epoch[236] Validation-mAP=0.759613
 - 2018/06/14: Epoch[174] Validation-mAP=0.759229
@@ -30,7 +32,11 @@ python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretra
 - tuning random-shape-epoch from 10 to 1, other almost same with original repo.
 - Command: 
 ```
-python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 240 --data-shape 416 --random-shape-epoch 1 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180 --lr-factor 0.1 --log “train-exp2.log” --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 \
+                    --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 240 --data-shape 416 \
+                    --random-shape-epoch 1 --min-random-shape 320 --max-random-shape 608 \
+                    --lr 0.001 --lr-steps 90,180 --lr-factor 0.1 --log train-exp2.log \
+                    --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
 ```
 - 2018/06/15: Epoch[236] Validation-mAP=0.707528
 
@@ -38,7 +44,11 @@ python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/r
 - lr-steps 180,360
 - Command:
 ```
-python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 180,360 --lr-factor 0.1 --log train-exp3.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 \
+                    --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 \
+                    --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 \
+                    --lr 0.001 --lr-steps 180,360 --lr-factor 0.1 --log train-exp3.log \
+                    --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
 ```
 - 2018/06/18: Epoch[256] Validation-mAP=0.758914
 
@@ -46,14 +56,44 @@ python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/r
 - lr-factor=0.5，lr-steps=[90，180，270，360，450]，lr=[0.001，0.0005，0.00025，0.000125，0.0000625，0.00003125]
 - Command:
 ```
-python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.5 --log train-exp4.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 \
+                    --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 \
+                    --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 \
+                    --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.5 --log train-exp4.log \
+                    --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5
 
-python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.5 --log train-exp4.log --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5 --resume 288
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 \
+                    --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 \
+                    --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 \
+                    --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.5 --log train-exp4.log \
+                    --num-class 20 --num-example 16551 --nms 0.45 --overlap 0.5 --resume 288
 ```
 - 2018/06/21: Epoch[477] Validation-mAP=0.759190
 - 2018/06/20: Epoch[408] Validation-mAP=0.759149
 - 2018/06/19: Epoch[276] Validation-mAP=0.757242
 - 2018/06/19: Epoch[233] Validation-mAP=0.755262
+
+#### Exp5
+- lr-factor=0.1，lr-steps=[90，180，270，360，450]，lr=[0.001，0.0001，0.00001，0.000001，0.0000001，0.00000001]
+- Command:
+```
+python train-416.py --network resnet50_yolo --batch-size 28 --pretrained model/resnet-50 \
+                    --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 \
+                    --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 \
+                    --lr 0.001 --lr-steps 90,180,270,360,450 --lr-factor 0.1 --log train-exp5.log
+```
+- 2018/06/22: 
+
+#### Exp6
+- lr-factor=0.1，lr-steps=[90，180]，lr=[0.001，0.0001，0.00001]
+- Command:
+```
+python train-416-resnet152.py --network resnet152_yolo --batch-size 28 --pretrained scratch\
+                    --epoch 0 --gpus 0,1 --begin-epoch 0 --end-epoch 540 --data-shape 416 \
+                    --random-shape-epoch 10 --min-random-shape 320 --max-random-shape 608 \
+                    --lr 0.001 --lr-steps 90,180 --lr-factor 0.1 --log train-exp6.log
+```
+- 2018/06/22: 
 
 ### Darkent19:
 - 71 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
