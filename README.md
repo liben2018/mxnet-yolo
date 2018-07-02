@@ -1,10 +1,10 @@
 # YOLO-v2: Real-Time Object Detection
 
 ## Todo list
-- adding --num_layers in train.py for choosing different network
-- get new network weights by training on imagenet directly or transfer learning
-- loss function
-- others
+- Adding --num_layers in train.py for choosing different network
+- Get new network weights by training on imagenet directly or transfer learning
+- Training different backbone from scratch
+- Loss function
 
 ## History of mAP (on VOC2007)
 
