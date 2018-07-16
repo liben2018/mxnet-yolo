@@ -96,7 +96,7 @@ python train-416-resnet152.py --network resnet152_yolo --batch-size 28 --pretrai
 - 2018/06/22: 
 #### Exp7
 - data-shape != 416
-- The results are not good becouse the pretrained models are trained for data-shape 416
+- The results are not good becouse the pretrained models are trained for data-shape 416?
 
 ### Darkent19:
 - 71 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
