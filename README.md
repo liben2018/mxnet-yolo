@@ -27,6 +27,7 @@ python train-416.py --gpus 0,1 --network resnet50_yolo --data-shape 416 --pretra
 - 2018/06/14: Epoch[105] Validation-mAP=0.757725
 - 2018/06/14: Epoch[104] Validation-mAP=0.757814
 - 74 mAP by original repo (https://github.com/zhreshold/mxnet-yolo)
+- 76.8 mAP at (416 x 416) by original paper.
 
 #### Exp2 
 - tuning random-shape-epoch from 10 to 1, other almost same with original repo.
